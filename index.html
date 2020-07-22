@@ -362,12 +362,12 @@
 
   <!--JS gif showing-->
   <script type="text/javascript"> 
-  	var showATS = (function(){
-  		var atsCount = 0;
+	var atsCount = 0;
+  	var showATS = (function(){  		
   		return function(){
 	  		var x = document.getElementById("ATS_gif");
 	  		atsCount += 1;
-	  		if(atsCount%2==0){
+	  		if(atsCount%2==1){
 	  			x.style.display = "flex";
 	  		}else{
 	  			x.style.display = "none";
