@@ -363,17 +363,15 @@
   <!--JS gif showing-->
   <script type="text/javascript"> 
 	var atsCount = 0;
-  	var showATS = (function(){  		
-  		return function(){
-	  		var x = document.getElementById("ATS_gif");
-	  		atsCount += 1;
-	  		if(atsCount%2==1){
-	  			x.style.display = "flex";
-	  		}else{
-	  			x.style.display = "none";
-	  		}
-  		}
-  	})();
+  	var showATS = function(){  		
+	  	var x = document.getElementById("ATS_gif");
+	  	atsCount += 1;
+	  	if(atsCount%2==1){
+	  		x.style.display = "flex";
+	  	}else{
+	  		x.style.display = "none";
+	  	}
+  	};
   </script>
 </body>
 
