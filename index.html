@@ -26,12 +26,17 @@
   		align-items: center;
   		justify-content: center;
   	}
+	#Tone_gif{
+  		display: none;
+  		align-items: center;
+  		justify-content: center;
+  	}
 
-  	.card:hover{
-  		border-width: 2px;
-  		border-color: black;
+  	.project:hover{
+  		border: solid 2px black;
   		cursor: pointer;
   	}
+	
   </style>
 </head>
 
@@ -189,8 +194,8 @@
             <h3 class="mb-0">其他项目</h3>
             <p>
 	        <div class="row row-cols-1 row-cols-md-2">
-			  <div class="col mb-4 project">
-			    <div class="card"  onclick="window.location.href='https://github.com/AtonalStar/IRDM-PageRankingSystem'; return false">
+			  <div class="col mb-4">
+			    <div class="card project"  onclick="window.location.href='https://github.com/AtonalStar/IRDM-PageRankingSystem'; return false">
 			      <img src="img/python.jpeg" alt="Page-ranking" class="card-img-top">
 			      <div class="card-body">
 			        <h5 class="card-title">搜索页面排名系统(Python)</h5>
@@ -198,8 +203,8 @@
 			      </div>
 			    </div>
 			  </div>
-			   <div class="col mb-4 project">
-			    <div class="card"  onclick="window.location.href='https://github.com/AtonalStar/RobotReaper'; return false">
+			   <div class="col mb-4">
+			    <div class="card project"  onclick="window.location.href='https://github.com/AtonalStar/RobotReaper'; return false">
 			      <img src="img/robot.JPG" alt="robot" class="card-img-top">
 			      <div class="card-body">
 			        <h5 class="card-title">Unity 制作RobotReaper机器人大战游戏</h5>
@@ -209,8 +214,8 @@
 			  </div>
 			</div>
 			<div class="row row-cols-1 row-cols-md-2">
-			  <div class="col mb-4 project">
-			    <div class="card" onclick="window.location.href='https://github.com/AtonalStar/comp327-Assignment2'; return false">
+			  <div class="col mb-4">
+			    <div class="card project" onclick="window.location.href='https://github.com/AtonalStar/comp327-Assignment2'; return false">
 			      <img src="img/redbrick.jpg" alt="redbrick" class="card-img-top">
 			      <div class="card-body">
 			        <h5 class="card-title">校园艺术品(Swift)</h5>
@@ -218,8 +223,8 @@
 			      </div>
 			    </div>
 			  </div>
-			  <div class="col mb-4 project">
-			    <div class="card" onclick="window.location.href='https://github.com/AtonalStar/Gallery'; return false">
+			  <div class="col mb-4">
+			    <div class="card project" onclick="window.location.href='https://github.com/AtonalStar/Gallery'; return false">
 			      <img src="img/paint.jpg" alt="Gallery" class="card-img-top">
 			      <div class="card-body">
 			        <h5 class="card-title">油画商城(Java Web)</h5>
@@ -293,8 +298,8 @@
       <div class="w-100">
         <h2 class="mb-5">作品展示</h2>
         <div class="row row-cols-1 row-cols-md-2">
-           <div class="col mb-4 project">
-		    <div class="card">
+           <div class="col mb-4" onclick="showTone()">
+		    <div class="card project" id="12-tone-card">
 		      <img src="img/12Tone.JPG" alt="12Tone" class="card-img-top">
 		      <div class="card-body">
 		        <h5 class="card-title">12-Tone Music</h5>
@@ -302,8 +307,8 @@
 		      </div>
 		    </div>
 		  </div>
-		  <div class="col mb-4 project" onclick="showATS()">
-		    <div class="card">
+		  <div class="col mb-4" onclick="showATS()">
+		    <div class="card project" id="ats_card">
 		      <img src="img/Home.png" alt="atsHome" class="card-img-top">
 		      <div class="card-body">
 		        <h5 class="card-title">Asset Tracking System 网页前端</h5>
@@ -317,6 +322,13 @@
 	          <img src="img/Webshow.gif" alt="web gif" style="width: 900px; 
 	  		height: 450px; ">
 	  	  </div>
+		</div>
+		<br/>
+		<div class="row row-cols-1 row-cols-md-2">    
+		  <div class="col mb-8" id="Tone_gif">
+	          <img src="img/12ToneMusic.gif" alt="12 tone gif" style="width: 900px; 
+	  		height: 450px; ">
+	  	  </div>
 	  	</div>
 	  </div>
     </section>
@@ -326,7 +338,7 @@
       <div class="w-100">
         <h2 class="mb-5">兴趣爱好</h2>
         <div class="row row-cols-1 row-cols-md-2">
-		  <div class="col mb-4 project">
+		  <div class="col mb-4">
 		    <div class="card">
 		      <img src="img/piano.jpeg" alt="Music" class="card-img-top">
 		      <div class="card-body">
@@ -335,7 +347,7 @@
 		      </div>
 		    </div>
 		  </div>
-		  <div class="col mb-4 project">
+		  <div class="col mb-4">
 		    <div class="card">
 		      <img src="img/badminton.jpg" alt="Sports" class="card-img-top">
 		      <div class="card-body">
@@ -362,14 +374,32 @@
 
   <!--JS gif showing-->
   <script type="text/javascript"> 
+  //show ATS gif
 	var atsCount = 0;
   	var showATS = function(){  		
 	  	var x = document.getElementById("ATS_gif");
+		var y = document.getElementById("ats_card");
 	  	atsCount += 1;
 	  	if(atsCount%2==1){
 	  		x.style.display = "flex";
+			y.style.border = "thick solid blue";
 	  	}else{
 	  		x.style.display = "none";
+			y.style.border = "thin solid gray";
+	  	}
+  	};
+  //show 12 tone gif
+	var toneCount = 0;
+  	var showTone = function(){  		
+	  	var x = document.getElementById("Tone_gif");
+		var y = document.getElementById("12-tone-card");
+	  	toneCount += 1;
+	  	if(toneCount%2==1){
+	  		x.style.display = "flex";
+			y.style.border = "thick solid blue";
+	  	}else{
+	  		x.style.display = "none";
+			y.style.border = "thin solid gray";
 	  	}
   	};
   </script>
