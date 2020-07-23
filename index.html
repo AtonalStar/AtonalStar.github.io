@@ -372,52 +372,52 @@
 
   <!--JS gif showing-->
   <script type="text/javascript"> 
-  //show ATS gif
 	var atsCount = 0;
-  	var showATS = function(){  		
-	  	var x = document.getElementById("ATS_gif");
-		var y = document.getElementById("ats_card");
+	var toneCount = 0;
+	var toneCard = document.getElementById("12-tone-card");
+	var atsCard = document.getElementById("ats_card");
+	var toneGIF = document.getElementById("Tone_gif");
+	var atsGIF = document.getElementById("ATS_gif");
+  	
+	var showATS = function(){  		
 	  	atsCount += 1;
 	  	if(atsCount%2==1){
-	  		x.style.display = "flex";
-			y.style.border = "thick solid blue";
+	  		atsGIF.style.display = "flex";
+			atsCard.style.border = "thick solid blue";
 	  	}else{
-	  		x.style.display = "none";
-			y.style.border = "";
+	  		atsGIF.style.display = "none";
+			atsCard.style.border = "";
 	  	}
   	};
     function hoverATS(){
         if(atsCount%2==0){
-            document.getElementById("ats_card").style.border="solid 2px black";
+            atsCard.style.border="solid 2px black";
         }
     }
     function cancelATS(){
         if(atsCount%2==0){
-            document.getElementById("ats_card").style.border="";
+            atsCard.style.border="";
         }
     }
-  //show 12 tone gif
-	var toneCount = 0;
+ 
   	var showTone = function(){  		
-	  	var x = document.getElementById("Tone_gif");
-		var y = document.getElementById("12-tone-card");
 	  	toneCount += 1;
 	  	if(toneCount%2==1){
-	  		x.style.display = "flex";
-			y.style.border = "thick solid blue";
+	  		toneGIF.style.display = "flex";
+			toneCard.style.border = "thick solid blue";
 	  	}else{
-	  		x.style.display = "none";
-			y.style.border = "";
+	  		toneGIF.style.display = "none";
+			toneCard.style.border = "";
 	  	}
   	};
     function hoverTone(){
         if(toneCount%2==0){
-            document.getElementById("ats_card").style.border="solid 2px black";
+            toneCard.style.border="solid 2px black";
         }
     }
     function cancelTone(){
         if(toneCount%2==0){
-            document.getElementById("ats_card").style.border="";
+            toneCard.style.border="";
         }
     }
 
