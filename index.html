@@ -299,7 +299,7 @@
         <h2 class="mb-5">作品展示</h2>
         <div class="row row-cols-1 row-cols-md-2">
            <div class="col mb-4" onclick="showTone()">
-		    <div class="card project" id="12-tone-card">
+		    <div class="card project" id="12-tone-card" onmouseover="hoverTone()" onmouseout="cancelTone()">
 		      <img src="img/12Tone.JPG" alt="12Tone" class="card-img-top">
 		      <div class="card-body">
 		        <h5 class="card-title">12-Tone Music</h5>
@@ -307,8 +307,8 @@
 		      </div>
 		    </div>
 		  </div>
-		  <div class="col mb-4" onclick="showATS()">
-		    <div class="card project" id="ats_card">
+		  <div class="col mb-4" onclick="showATS()" >
+		    <div class="card project" id="ats_card" onmouseover="hoverATS()" onmouseout="cancelATS()">
 		      <img src="img/Home.png" alt="atsHome" class="card-img-top">
 		      <div class="card-body">
 		        <h5 class="card-title">Asset Tracking System 网页前端</h5>
@@ -317,19 +317,17 @@
 		    </div>
 		  </div>
 		</div>
-		<div class="row row-cols-1 row-cols-md-2">      
-	      <div class="col mb-8" id="ATS_gif">
-	          <img src="img/Webshow.gif" alt="web gif" style="width: 900px; 
-	  		height: 450px; ">
-	  	  </div>
-		</div>
-		<br/>
 		<div class="row row-cols-1 row-cols-md-2">    
 		  <div class="col mb-8" id="Tone_gif">
-	          <img src="img/12ToneMusic.gif" alt="12 tone gif" style="width: 900px; 
-	  		height: 450px; ">
+	          <img src="img/12ToneMusic.gif" alt="12 tone gif" style="width: 900px; height: 450px; ">
 	  	  </div>
 	  	</div>
+        <br/>
+        <div class="row row-cols-1 row-cols-md-2">
+            <div class="col mb-8" id="ATS_gif">
+                <img src="img/Webshow.gif" alt="web gif" style="width: 900px; height: 450px; ">
+            </div>
+        </div>
 	  </div>
     </section>
 
@@ -385,9 +383,19 @@
 			y.style.border = "thick solid blue";
 	  	}else{
 	  		x.style.display = "none";
-			y.style.border = "thin solid gray";
+			y.style.border = "";
 	  	}
   	};
+    function hoverATS(){
+        if(atsCount%2==0){
+            document.getElementById("ats_card").style.border="solid 2px black";
+        }
+    }
+    function cancelATS(){
+        if(atsCount%2==0){
+            document.getElementById("ats_card").style.border="";
+        }
+    }
   //show 12 tone gif
 	var toneCount = 0;
   	var showTone = function(){  		
@@ -399,9 +407,20 @@
 			y.style.border = "thick solid blue";
 	  	}else{
 	  		x.style.display = "none";
-			y.style.border = "thin solid gray";
+			y.style.border = "";
 	  	}
   	};
+    function hoverTone(){
+        if(toneCount%2==0){
+            document.getElementById("ats_card").style.border="solid 2px black";
+        }
+    }
+    function cancelTone(){
+        if(toneCount%2==0){
+            document.getElementById("ats_card").style.border="";
+        }
+    }
+
   </script>
 </body>
 
