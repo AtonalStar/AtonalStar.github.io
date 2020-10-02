@@ -31,6 +31,11 @@
   		align-items: center;
   		justify-content: center;
   	}
+    #May_gif{
+        display: none;
+        align-items: center;
+        justify-content: center;
+    }
 
   	.project:hover{
   		border: solid 2px black;
@@ -87,7 +92,7 @@
         <div class="subheading mb-5">295 Holloway Road, London, UK · (+86)17859297602 ·
           <a href="mailto:1048904413@qq.com">1048904413@qq.com</a>
         </div>
-        <p class="lead mb-5">欢迎来到我的个人主页！我是林紫微，来自福建省福州市，现为就读于英国伦敦大学学院UCL软件系统工程专业的研究生。 我热爱软件开发，在校接触的技术广泛，主要使用Java, Python编程, 以及React网页前端, 现处于找工作阶段，希望到上海，深圳，广州，杭州等城市发展 :) </p>
+        <p class="lead mb-5">欢迎来到我的个人主页！我是林紫微，来自福建省福州市，现为就读于英国伦敦大学学院UCL软件系统工程专业的研究生。 我热爱软件开发，在校接触的技术广泛，主要使用Java, Python编程, 使用过React进行前端开发, 现处于找工作阶段，希望能到上海发展 :) </p>
         <div class="download-button">
           <a class="btn btn-outline-info" href="src/林紫微_简历.pdf" download="林紫微_简历.pdf">下载简历</a>
         </div>
@@ -148,8 +153,9 @@
         <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
           <div class="resume-content">
             <h3 class="mb-0">IBM-MayFlower自动航行船小组项目</h3>
-            <div class="subheading mb-3">环境搭建，Unity传感器模拟，React前端等</div>
-            <p>UCL与IBM公司合作项目，由六人小组开发自动航行小船的实验版控制系统，原始目标为让船从谢菲尔德沿运河到唐卡斯特的自动行驶，并有Web平台显示船的实时位置和汇报天气，气温，水质等参数。由于疫情原因无法实地开发，改为用Unity模拟水面，障碍等环境，用ROS系统模拟机器船模，通过模拟传感器从Unity环境获取数据传入ROS系统实现自动化控制，并仍有Web端(React前端加Django后端)显示数据。</p>
+            <div class="subheading mb-3">环境搭建，Unity传感器模拟，Django后端，React前端</div>
+              <p>UCL与IBM公司合作项目，原本是为谢菲尔德运河上的船开发自动驾驶系统，受疫情影响改为用Unity模拟当地环境，模拟传感器，连接ROS(机器人操作系统)控制Unity中的船实现自动行驶，同时开发网页端显示数据并提供船的手动控制接口。 <a href= "https://youtu.be/9YMRUbnovlE"><b>YouTube视频展示</b></a></p>
+              <p>个人任务：Unity中用Terrain模拟河道，C#模拟电池、GPS、IMU传感器并向ROS发送数据；Python的Django及REST Framework搭建Server端连接ROS获取数据存到PostgreSQL数据库并支持API; 协助组员用React框架开发前端。</p>
           </div>
           <div class="resume-date text-md-right">
             <span class="text-primary">June 2020 - 至今</span>
@@ -300,8 +306,8 @@
     <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="works">
       <div class="w-100">
         <h2 class="mb-5">作品展示</h2>
-        <div class="row row-cols-1 row-cols-md-2">
-           <div class="col mb-4" onclick="showTone()">
+        <div class="row">
+           <div class="col-6 col-md-4" onclick="showTone()">
 		    <div class="card project" id="12-tone-card" onmouseover="hoverTone()" onmouseout="cancelTone()">
 		      <img src="img/12Tone.JPG" alt="12Tone" class="card-img-top">
 		      <div class="card-body">
@@ -310,7 +316,7 @@
 		      </div>
 		    </div>
 		  </div>
-		  <div class="col mb-4" onclick="showATS()" >
+		  <div class="col-6 col-md-4" onclick="showATS()" >
 		    <div class="card project" id="ats_card" onmouseover="hoverATS()" onmouseout="cancelATS()">
 		      <img src="img/Home.png" alt="atsHome" class="card-img-top">
 		      <div class="card-body">
@@ -319,7 +325,17 @@
 		      </div>
 		    </div>
 		  </div>
+        <div class="col-6 col-md-4" onclick="showMay()" >
+            <div class="card project" id="may_card" onmouseover="hoverMay()" onmouseout="cancelMay()">
+                <img src="img/mayflower.png" alt="MayFlower" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">MayFlower 自动船系统环境</h5>
+                    <p class="card-text">为IBM的构想开发的自动船系统框架, 使用技术包括：Unity模拟环境，ROS控制船，Django + REST Framework后端，React前端。</p>
+                </div>
+            </div>
+        </div>
 		</div>
+          <br/>
 		<div class="row row-cols-1 row-cols-md-2">    
 		  <div class="col mb-8" id="Tone_gif">
 	          <img src="img/12ToneMusic.gif" alt="12 tone gif" style="width: 900px; height: 450px; ">
@@ -331,6 +347,12 @@
                 <img src="img/Webshow.gif" alt="web gif" style="width: 900px; height: 450px; ">
             </div>
         </div>
+          <br/>
+          <div class="row row-cols-1 row-cols-md-2">
+              <div class="col mb-8" id="May_gif">
+                  <img src="img/MayFlower.gif" alt="MayFlower gif" style="width: 900px; height: 450px; ">
+              </div>
+          </div>
 	  </div>
     </section>
 
@@ -377,10 +399,13 @@
   <script type="text/javascript"> 
 	var atsCount = 0;
 	var toneCount = 0;
+	var mayCount = 0;
 	var toneCard = document.getElementById("12-tone-card");
 	var atsCard = document.getElementById("ats_card");
+    var mayCard = document.getElementById("may_card");
 	var toneGIF = document.getElementById("Tone_gif");
 	var atsGIF = document.getElementById("ATS_gif");
+    var mayGIF = document.getElementById("May_gif");
   	
 	var showATS = function(){  		
 	  	atsCount += 1;
@@ -421,6 +446,27 @@
     function cancelTone(){
         if(toneCount%2==0){
             toneCard.style.border="";
+        }
+    }
+
+    var showMay = function(){
+        mayCount += 1;
+        if(mayCount%2==1){
+            mayGIF.style.display = "flex";
+            mayCard.style.border = "thick solid blue";
+        }else{
+            mayGIF.style.display = "none";
+            mayCard.style.border = "";
+        }
+    };
+    function hoverMay(){
+        if(mayCount%2==0){
+            mayCard.style.border="solid 2px black";
+        }
+    }
+    function cancelMay(){
+        if(mayCount%2==0){
+            mayCard.style.border="";
         }
     }
 
