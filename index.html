@@ -22,10 +22,13 @@
   <link href="css/resume.css" rel="stylesheet">
   <style>
     .gif{
-        width: 75vw;
-        margin: 0 auto;
+        width: 76vw;
+        position: relative;
+        left: 50%;
+        margin-left: -38vw;
     }
   	.gif-item{
+        width: 75vw;
   		display: none;
   		align-items: center;
   		justify-content: center;
@@ -303,7 +306,7 @@
     <hr class="m-0">
 
     <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="works">
-      <div class="w-100">
+      <div class="w-100 work">
         <h2 class="mb-5">作品展示</h2>
         <div class="row">
            <div class="col-6 col-md-4" onclick="showTone()">
@@ -472,17 +475,17 @@
     }
 
   </script>
-  <script>
+  <script type="text/javascript">
       console.log("begin img");
       var imgElems = document.getElementsByTagName("img");
-      console.log(Object.prototype.toString.call(imgElems)); //HTML Collection
+      //console.log(Object.prototype.toString.call(imgElems)); //HTML Collection
       Array.prototype.slice.call(imgElems).forEach(function(item){
-          console.log("begin img loading");
+          //console.log("begin img loading");
           let loadImg = new Image();
           loadImg.src = item.getAttribute("data-src");
           loadImg.onload = function(){
             item.setAttribute("src", this.src);
-            console.log(item.src);
+            //console.log(item.src);
           };
       });
   </script>
