@@ -29,8 +29,14 @@
   		align-items: center;
   		justify-content: center;
   	}
+    .actual-img{
+        width: 60rem;
+        height: 30rem;
+        border:2px solid steelblue;
+        border-radius: 2rem;
+    }
   	.project:hover{
-  		border: solid 2px black;
+  		border: 3px solid lightsteelblue;
   		cursor: pointer;
   	}
 	
@@ -43,7 +49,7 @@
     <a class="navbar-brand js-scroll-trigger" href="#page-top">
       <span class="d-block d-lg-none">林紫微</span>
       <span class="d-none d-lg-block">
-        <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile1.png" alt="">
+        <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/lazy-load.png" data-src="img/profile1.png" alt="">
       </span>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -195,7 +201,7 @@
 	        <div class="row">
 			  <div class="col-6 col-md-4">
 			    <div class="card project"  onclick="window.location.href='https://github.com/AtonalStar/IRDM-PageRankingSystem'; return false">
-			      <img src="img/python.jpeg" alt="Page-ranking" class="card-img-top">
+			      <img src="img/lazy-load.png" data-src="img/python.jpeg" alt="Page-ranking" class="card-img-top">
 			      <div class="card-body">
 			        <h5 class="card-title">搜索页面排名系统 (Python)</h5>
 			        <p class="card-text">Python实现倒排索引并进行Vector Space和BM25评分排序，PyTorch 实现逻辑回归, 神经网络评分排序。</p>
@@ -204,7 +210,7 @@
 			  </div>
 			   <div class="col-6 col-md-4">
 			    <div class="card project"  onclick="window.location.href='https://github.com/AtonalStar/RobotReaper'; return false">
-			      <img src="img/robot.JPG" alt="robot" class="card-img-top">
+			      <img src="img/lazy-load.png" data-src="img/robot.JPG" alt="robot" class="card-img-top">
 			      <div class="card-body">
 			        <h5 class="card-title">Unity 制作RobotReaper机器人大战游戏</h5>
 			        <p class="card-text">小组项目, 负责组织会议撰写文档, FL Studio制作BGM, C#代码实现音效。</p>
@@ -213,7 +219,7 @@
 			   </div>
 			   <div class="col-6 col-md-4">
 			    <div class="card project" onclick="window.location.href='https://github.com/AtonalStar/comp327-Assignment2'; return false">
-			      <img src="img/redbrick.jpg" alt="redbrick" class="card-img-top">
+			      <img src="img/lazy-load.png" data-src="img/redbrick.jpg" alt="redbrick" class="card-img-top">
 			      <div class="card-body">
 			        <h5 class="card-title">校园艺术品(Swift)</h5>
 			        <p class="card-text">用Xcode工具Swift语言开发的校园艺术品的地图定位与介绍的iOS App。</p>
@@ -302,7 +308,7 @@
         <div class="row">
            <div class="col-6 col-md-4" onclick="showTone()">
 		    <div class="card project" id="12-tone-card" onmouseover="hoverTone()" onmouseout="cancelTone()">
-		      <img src="img/12Tone.JPG" alt="12Tone" class="card-img-top">
+		      <img src="img/lazy-load.png" data-src="img/12Tone.JPG" alt="12Tone" class="card-img-top">
 		      <div class="card-body">
 		        <h5 class="card-title">12-Tone Music</h5>
 		        <p class="card-text">本科毕业个人项目完成，用勋伯格12音作曲法进行自动作曲的Java桌面应用。</p>
@@ -311,7 +317,7 @@
 		  </div>
 		  <div class="col-6 col-md-4" onclick="showATS()" >
 		    <div class="card project" id="ats_card" onmouseover="hoverATS()" onmouseout="cancelATS()">
-		      <img src="img/Home.png" alt="atsHome" class="card-img-top">
+		      <img src="img/lazy-load.png" data-src="img/Home.png" alt="atsHome" class="card-img-top">
 		      <div class="card-body">
 		        <h5 class="card-title">Asset Tracking System 网页前端</h5>
 		        <p class="card-text">为NTT DATA公司开发的设备跟踪系统实验版的网页前端，用React + React-Bootstrap开发</p>
@@ -320,7 +326,7 @@
 		  </div>
         <div class="col-6 col-md-4" onclick="showMay()" >
             <div class="card project" id="may_card" onmouseover="hoverMay()" onmouseout="cancelMay()">
-                <img src="img/mayflower.png" alt="MayFlower" class="card-img-top">
+                <img src="img/lazy-load.png" data-src="img/mayflower.png" alt="MayFlower" class="card-img-top">
                 <div class="card-body">
                     <h5 class="card-title">MayFlower 自动船系统环境</h5>
                     <p class="card-text">为IBM的构想开发的自动船系统框架, 使用技术包括：Unity模拟环境，ROS控制船，Django + REST Framework后端，React前端。</p>
@@ -332,19 +338,19 @@
           <div class="gif">
               <div class="row row-cols-1 row-cols-md-2">
                   <div class="col mb-8 gif-item" id="Tone_gif">
-                      <img src="img/12ToneMusic.gif" alt="12 tone gif" style="width: 95%; ">
+                      <img class="actual-img" src="img/lazy-load.png" data-src="img/12ToneMusic.gif" alt="12 tone gif"/>
                   </div>
               </div>
               <br/>
               <div class="row row-cols-1 row-cols-md-2">
                   <div class="col mb-8 gif-item" id="ATS_gif">
-                      <img src="img/Webshow.gif" alt="web gif" style="width: 95%; ">
+                      <img class="actual-img" src="img/lazy-load.png" data-src="img/Webshow.gif" alt="web gif" />
                   </div>
               </div>
               <br/>
               <div class="row row-cols-1 row-cols-md-2">
                   <div class="col mb-8 gif-item" id="May_gif">
-                      <img src="img/MayFlower.gif" alt="MayFlower gif" style=" width: 95%; ">
+                      <img class="actual-img" src="img/lazy-load.png" data-src="img/MayFlower.gif" alt="MayFlower gif" />
                   </div>
               </div>
           </div>
@@ -358,7 +364,7 @@
         <div class="row row-cols-1 row-cols-md-2">
 		  <div class="col mb-4">
 		    <div class="card">
-		      <img src="img/piano.jpeg" alt="Music" class="card-img-top">
+		      <img src="img/lazy-load.png" data-src="img/piano.jpeg" alt="Music" class="card-img-top">
 		      <div class="card-body">
 		        <h5 class="card-title">音乐</h5>
 		        <p class="card-text">擅长钢琴，合唱，Acappella(纯人声乐团), 会一点吉他，尤克里里，自学作曲编曲(FL Studio)。 尝试作毕业纪念曲《我们》（高中毕业），《西年》（本科毕业，尝试作曲编曲录音后期全自制，可在QQ音乐搜索）</p>
@@ -367,7 +373,7 @@
 		  </div>
 		  <div class="col mb-4">
 		    <div class="card">
-		      <img src="img/badminton.jpg" alt="Sports" class="card-img-top">
+		      <img src="img/lazy-load.png" data-src="img/badminton.jpg" alt="Sports" class="card-img-top">
 		      <div class="card-body">
 		        <h5 class="card-title">体育</h5>
 		        <p class="card-text">擅长羽毛球，跑步，也喜欢篮球，网球，游泳，乒乓球等</p>
@@ -406,7 +412,7 @@
 	  	atsCount += 1;
 	  	if(atsCount%2==1){
 	  		atsGIF.style.display = "flex";
-			atsCard.style.border = "thick solid blue";
+			atsCard.style.border = "thick solid skyblue";
 	  	}else{
 	  		atsGIF.style.display = "none";
 			atsCard.style.border = "";
@@ -414,7 +420,7 @@
   	};
     function hoverATS(){
         if(atsCount%2==0){
-            atsCard.style.border="solid 2px black";
+            atsCard.style.border="3px solid lightsteelblue";
         }
     }
     function cancelATS(){
@@ -427,7 +433,7 @@
 	  	toneCount += 1;
 	  	if(toneCount%2==1){
 	  		toneGIF.style.display = "flex";
-			toneCard.style.border = "thick solid blue";
+			toneCard.style.border = "thick solid skyblue";
 	  	}else{
 	  		toneGIF.style.display = "none";
 			toneCard.style.border = "";
@@ -435,7 +441,7 @@
   	};
     function hoverTone(){
         if(toneCount%2==0){
-            toneCard.style.border="solid 2px black";
+            toneCard.style.border="3px solid lightsteelblue";
         }
     }
     function cancelTone(){
@@ -448,7 +454,7 @@
         mayCount += 1;
         if(mayCount%2==1){
             mayGIF.style.display = "flex";
-            mayCard.style.border = "thick solid blue";
+            mayCard.style.border = "thick solid skyblue";
         }else{
             mayGIF.style.display = "none";
             mayCard.style.border = "";
@@ -456,7 +462,7 @@
     };
     function hoverMay(){
         if(mayCount%2==0){
-            mayCard.style.border="solid 2px black";
+            mayCard.style.border="3px solid lightsteelblue";
         }
     }
     function cancelMay(){
@@ -465,6 +471,20 @@
         }
     }
 
+  </script>
+  <script>
+      console.log("begin img");
+      var imgElems = document.getElementsByTagName("img");
+      console.log(Object.prototype.toString.call(imgElems)); //HTML Collection
+      Array.prototype.slice.call(imgElems).forEach(function(item){
+          console.log("begin img loading");
+          let loadImg = new Image();
+          loadImg.src = item.getAttribute("data-src");
+          loadImg.onload = function(){
+            item.setAttribute("src", this.src);
+            console.log(item.src);
+          };
+      });
   </script>
 </body>
 

@@ -25,6 +25,11 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Personal Web Page\resume\img" />
+    </key>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -36,7 +41,7 @@
       <option name="presentableId" value="Default" />
       <updated>1605439418655</updated>
       <workItem from="1605439420114" duration="1015000" />
-      <workItem from="1605440933377" duration="1140000" />
+      <workItem from="1605440933377" duration="6942000" />
     </task>
     <servers />
   </component>
